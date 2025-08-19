@@ -155,10 +155,15 @@ curl -X GET http://localhost:8080/topicos -H "Authorization: Bearer <token>"
 ```
 
 ---
+### Reglas de negocio
 
-
-
-
+- No se permiten tópicos duplicados (mismo título y mismo mensaje).
+- En la creación (`POST /topicos`) se debe enviar el `id` del autor (usuario existente).
+- En la actualización (`PUT /topicos/{id}`):
+  - **No se puede cambiar el autor del tópico**.
+  - Solo se pueden modificar el título, mensaje y curso.
+- La fecha de creación (`fecha_creacion`) no se puede modificar.
+- Si se intenta actualizar o eliminar un tópico inexistente, se retorna `404 Not Found`.
 
 ---
 
