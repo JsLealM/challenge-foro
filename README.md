@@ -55,8 +55,8 @@ foro-hub/
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/foro-hub.git
-cd foro-hub
+git clone https://github.com/JsLealM/challenge-foro.git
+cd challenge-foro
 ```
 
 ### 2️⃣ Configurar la base de datos
@@ -64,15 +64,15 @@ cd foro-hub
 Crea una base de datos en MySQL:
 
 ```sql
-CREATE DATABASE foro_hub;
+CREATE DATABASE challenge_foro;
 ```
 
 En el archivo `src/main/resources/application.properties` configura tus credenciales:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/foro_hub
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
+spring.datasource.url=jdbc:mysql://localhost:3306/challenge_foro
+spring.datasource.username=root
+spring.datasource.password=root
 
 spring.jpa.hibernate.ddl-auto=validate
 spring.jpa.show-sql=true
